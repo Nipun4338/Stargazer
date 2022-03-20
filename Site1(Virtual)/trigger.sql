@@ -1,0 +1,28 @@
+SET SERVEROUTPUT ON;
+CREATE OR REPLACE TRIGGER trig 
+AFTER INSERT 
+ON exoplanet
+DECLARE
+BEGIN
+	DBMS_OUTPUT.PUT_LINE('New object inserted on ExoPlanet!');
+END;
+/
+
+
+CREATE OR REPLACE TRIGGER trig 
+AFTER INSERT 
+ON temperature
+DECLARE
+BEGIN
+	DBMS_OUTPUT.PUT_LINE('New object temperature added!');
+END;
+/
+
+CREATE OR REPLACE TRIGGER trig 
+AFTER INSERT 
+ON star
+DECLARE
+BEGIN
+	DBMS_OUTPUT.PUT_LINE('Star details added for exoplanet!');
+END;
+/
